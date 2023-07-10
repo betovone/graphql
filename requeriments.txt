@@ -1,0 +1,14 @@
+anyio==3.7.1
+ariadne==0.20.1
+asgiref==3.7.2
+backports.zoneinfo==0.2.1
+Django==4.2.3
+django-cors==0.1
+exceptiongroup==1.1.2
+graphql-core==3.2.3
+idna==3.4
+pyzmq==25.1.0
+sniffio==1.3.0
+sqlparse==0.4.4
+starlette==0.28.0
+typing-extensions==4.7.1
