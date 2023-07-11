@@ -9,10 +9,11 @@ from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from django.http import JsonResponse, HttpResponse
 
-from .functions import listPosts_resolver
+from .functions import listPosts_resolver, getPost_resolver
 
 query = ObjectType("Query")
 query.set_field("listPosts", listPosts_resolver)
+query.set_field("getPost", getPost_resolver)
 
 
 type_defs = load_schema_from_path("schema.graphql")
