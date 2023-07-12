@@ -6,7 +6,7 @@ from django.db import models
 class Post(models.Model):
     title = models.CharField("titulo", max_length=50)
     description = models.CharField("descripción", max_length=250)
-    create_at = models.CharField("creado", max_length=20)
+    create_at = models.CharField("creado", max_length=20, null=True)
     tipo_post_id = models.ForeignKey("TipoPost", verbose_name="Tipo post", on_delete=models.CASCADE, null=True)
     
     def __str__(self):

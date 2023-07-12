@@ -9,16 +9,27 @@ from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from django.http import JsonResponse, HttpResponse
 
-from .functions import listPosts_resolver, getPost_resolver
+from .functions import (
+    listPosts_resolver, 
+    getPost_resolver, 
+    create_post_resolver,
+    update_post_resolver,
+    delete_post_resolver
+)
 
 query = ObjectType("Query")
+mutation = ObjectType("Mutation")
+
 query.set_field("listPosts", listPosts_resolver)
 query.set_field("getPost", getPost_resolver)
+mutation.set_field("createPost", create_post_resolver)
+mutation.set_field("updatePost", update_post_resolver)
+mutation.set_field("deletePost", delete_post_resolver)
 
 
 type_defs = load_schema_from_path("schema.graphql")
 schema = make_executable_schema(
-    type_defs, query, snake_case_fallback_resolvers
+    type_defs, query, mutation, snake_case_fallback_resolvers
 )
 
 class PlayGroundView(TemplateView):
