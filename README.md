@@ -121,6 +121,8 @@ mutation borrarPost {
 }
 ```
 
+Para mas información:
+> https://www.apollographql.com/blog/graphql/python/complete-api-guide/
 
 
 
