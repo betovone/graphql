@@ -27,7 +27,6 @@ query obtenerPost {
 }
 ```
 
-
 Listar todos los Post:
 ```json
 
