@@ -13,7 +13,7 @@ En el archivo **schema.graphql** están definidos los queries (consultas) y los 
 Consultando la documentación del botón **DOCS** se pueden realizar como ejemplo las siguientes queries:
 
 Consultar un Post específico:
-```json
+```
 
 query obtenerPost {
   getPost(id: "1"){
@@ -28,7 +28,7 @@ query obtenerPost {
 ```
 
 Listar todos los Post:
-```json
+```
 
 {
   listPosts{
@@ -52,7 +52,7 @@ Listar todos los Post:
 Las mutaciones son los **INSERTS**, **UPDATES** y **DELETES**.
 
 Ejemplo de INSERT:
-```json
+```
 
 mutation CreateNewPost {
   createPost(
@@ -75,7 +75,7 @@ mutation CreateNewPost {
 ```
 
 Ejemplo de UPDATE:
-```json
+```
 
 mutation actualizarPost {
   updatePost(
@@ -99,7 +99,7 @@ mutation actualizarPost {
 ```
 
 Ejemplo de DELETE:
-```json
+```
 
 mutation borrarPost {
   deletePost(
